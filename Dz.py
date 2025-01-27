@@ -1,13 +1,32 @@
 class User():
-    def __init__(self, ID, name, access):
+    def __init__(self, ID, name):
 
         self._ID = ID
         self._user_name = name
-        self._access = access
+        self._access = "user"
+
+    def get_ID(self):
+        return self._ID
+
+    def get_user_name(self):
+        return self._user_name
+
+    def get_access(self):
+        return self._access
+
+    def set_name(self, name):
+        self._user_name = name
 
 class Admin(User):
-    def __init__(self, add_user, rem_user):
-        super().__init__()
+    def __init__(self, ID, name):
+        super().__init__(ID, name)
+        self._access = 'admin'
+        self._users = []
+
+        def add_user(self, User):
+
+        def remove_user(self, user)
+            
 
 
 
