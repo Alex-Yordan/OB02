@@ -23,14 +23,27 @@ class Admin(User):
         self._access = 'admin'
         self._users = []
 
-        def add_user(self, User):
+    def add_user_name(self, user):
+            self._users.append(user)
+            print(f"Пользователь {user.get_user_name()} добавлен в систему.")
 
-        def remove_user(self, user)
-            
+    def remove_user_name(self, user):
+            self._users.remove(user)
+            print(f"Пользователь {user.get_user_name()} удален из системы.")
+
+    def get_users(self):
+
+        return [user.get_user_name() for user in self._users]
 
 
+users = []
+user1 = User("40020", "Uriy")
+user2 = User("40030", "Ulia")
+admin = Admin("100", "MAX",)
 
+admin.add_user_name(user1)
+admin.add_user_name(user2)
+print("Список пользователей:", admin.get_users())
 
-user1 = User("40020", "Uriy", "5")
-user2 = User("40030", "Ulia", "2")
-admin1 = Admin("100", "", "5")
+admin.remove_user_name(user1)
+print("Список пользователей:", admin.get_users())
